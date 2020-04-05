@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name">Staff</string>
+
+    <string name="isMember">已為會員?</string>
+    <string name="signUp">註冊</string>
+    <string name="account">帳號</string>
+    <string name="password">密碼</string>
+    <string name="password2">再次輸入密碼</string>
+    <string name="email">Email</string>
+    <string name="memberCount">會員帳號</string>
+
+    <string name="balance">餘額</string>
+    <string name="photo">Photo</string>
+    <string name="name">姓名</string>
+
+
+    <string name="login">登入</string>
+    <string name="logout">登出</string>
+
+    <string name="forget_pw">忘記密碼?</string>
+    <string name="sign_up">註冊新帳號</string>
+
+    <string name="msg_BooksNotFound">Books not found</string>
+    <string name="msg_InvalidUserOrPassword">Invalid user name or password</string>
+    <string name="msg_UserIdExist">User ID exists</string>
+    <string name="msg_AccountNotCreatedDueToErrorHappen">account not created due to error happens</string>
+    <string name="msg_InputEmpty">cannot be empty</string>
+    <string name="msg_ConfirmPasswordNotSameAsPassword">Confirm password not same as password</string>
+    <string name="msg_FailCreateAccount">Fail to create an account</string>
+    <string name="msg_SuccessfullyCreateAccount">Create an account successfully</string>
+    <string name="msg_NoProfileFound">No profile found</string>
+    <string name="msg_FailUpdateProfile">Fail to update profile</string>
+    <string name="msg_SuccessfullyUpdateProfile">Update profile successfully</string>
+    <string name="msg_NewQuantity">New quantity:</string>
+    <string name="msg_ClearCart">Clear cart？</string>
+    <string name="msg_EndDateNotLessThanStartDate">End date should not be less than start date</string>
+    <string name="msg_NumbersOfOrders">Numbers of orders:</string>
+    <string name="msg_NoNetwork">No network connection available</string>
+    <string name="msg_FailCreateOrder">Fail to create the order</string>
+    <string name="msg_NoOrderFound">No order found</string>
+
+    <string name="hint_etUser">User name</string>
+    <string name="hint_etPassword">password</string>
+    <string name="hint_etUrl">Server URL</string>
+
+    <string name="text_etName">Name</string>
+    <string name="text_etEmail">Email</string>
+    <string name="text_tvUrl">Server URL</string>
+    <string name="text_btnSubmit">Submit</string>
+</resources>
