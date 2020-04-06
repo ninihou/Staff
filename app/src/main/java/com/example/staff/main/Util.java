@@ -7,6 +7,9 @@ import android.net.NetworkInfo;
 import android.widget.Toast;
 
 import com.example.staff.Pages;
+import com.example.staff.R;
+import com.example.staff.bike.BikeActivity;
+import com.example.staff.record.RecordActivity;
 
 import java.util.ArrayList;
 
@@ -21,9 +24,9 @@ public class Util {
 
     // 功能分類
     public final static Pages[] PAGES = {
-//            new Pages(0, "Book", R.drawable.books, BookActivity.class),
-//            new Pages(1, "Order", R.drawable.cart_empty, CartActivity.class),
-//            new Pages(2, "Member", R.drawable.user, MemberShipActivity.class),
+            new Pages(0, "接單", R.drawable.bikes, BikeActivity.class),
+            new Pages(1, "會員中心", R.drawable.member, MemberShipActivity.class),
+            new Pages(2, "訂單紀錄", R.drawable.record, RecordActivity.class),
 //            new Pages(3, "Setting", R.drawable.setting, ChangeUrlActivity.class)
     };
 

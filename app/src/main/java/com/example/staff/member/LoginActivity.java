@@ -2,6 +2,7 @@ package com.example.staff.member;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.example.staff.main.MainActivity;
 import com.example.staff.task.CommonTask;
 import com.example.staff.R;
 import com.example.staff.main.Util;
@@ -66,6 +68,7 @@ public class LoginActivity extends AppCompatActivity {
                     .putString("staff_password", staff_password).apply();
             setResult(RESULT_OK);
             finish();
+
         } else {
             showMessage(R.string.msg_InvalidUserOrPassword);
         }

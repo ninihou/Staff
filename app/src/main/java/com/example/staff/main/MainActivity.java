@@ -1,11 +1,15 @@
 package com.example.staff.main;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 
+import android.Manifest;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -20,14 +24,20 @@ import com.example.staff.Pages;
 import com.example.staff.R;
 import com.example.staff.member.LoginActivity;
 
+import java.util.HashSet;
+import java.util.Set;
+
 import static com.example.staff.main.Util.PAGES;
 
 public class MainActivity extends AppCompatActivity {
+    private static final int REQUEST_LOGIN = 1;
+//    private static final int MY_REQUEST_CODE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        onLogin();
         GridView gvCategories = findViewById(R.id.gvPages);
         gvCategories.setAdapter(new MyGridViewAdapter(this));
         gvCategories.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -38,6 +48,38 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+    }
+
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        askPermissions();
+//    }
+//
+//    private void askPermissions() {
+//        String[] permissions = {
+//                Manifest.permission.ACCESS_COARSE_LOCATION,
+//                Manifest.permission.ACCESS_FINE_LOCATION
+//        };
+//
+//        Set<String> permissionsRequest = new HashSet<>();
+//        for (String permission : permissions) {
+//            int result = ContextCompat.checkSelfPermission(this, permission);
+//            if (result != PackageManager.PERMISSION_GRANTED) {
+//                permissionsRequest.add(permission);
+//            }
+//        }
+//
+//        if (!permissionsRequest.isEmpty()) {
+//            ActivityCompat.requestPermissions(this,
+//                    permissionsRequest.toArray(new String[permissionsRequest.size()]),
+//                    MY_REQUEST_CODE);
+//        }
+//    }
+
+    private void onLogin() {
+        Intent loginIntent = new Intent(this, LoginActivity.class);
+        startActivityForResult(loginIntent, REQUEST_LOGIN);
     }
 
     private class MyGridViewAdapter extends BaseAdapter {
